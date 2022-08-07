@@ -1,37 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+import CardItem from "./CardItem.jsx";
 
-const CarausellItem = () => {
+const CarausellItem = (props) => {
+  //destructuracion
+  const { store } = useContext(Context);
   return (
     <>
-      <div className="container">
-        <div className="card-padre">
-          <div className="card-sw">
-            <div>imagen</div>
-            <div>contenido</div>
-            <div>pie de pag</div>
-          </div>
-          <div className="card-sw">
-            <div>imagen</div>
-            <div>contenido</div>
-            <div>pie de pag</div>
-          </div>
-          <div className="card-sw">
-            <div>imagen</div>
-            <div>contenido</div>
-            <div>pie de pag</div>
-          </div>
-          <div className="card-sw">
-            <div>imagen</div>
-            <div>contenido</div>
-            <div>pie de pag</div>
-          </div> <div className="card-sw">
-            <div>imagen</div>
-            <div>contenido</div>
-            <div>pie de pag</div>
+      {props.nature == "people" ? (
+        <div className="container">
+          <div className="card-padre">
+            {store.people.map((item) => {
+              return <CardItem key={item.created} item={item}/>;
+            })}
           </div>
         </div>
-      </div>
+      ) : props.nature == "planet" ? (
+        <h1>NO HAY PLANETAS</h1>
+      ) : null}
+      {/* <div className="container">
+        <div className="card-padre">
+          {store.people.map((item) => {
+            return <CardItem />;
+          })}
+        </div>
+      </div> */}
     </>
   );
 };
-export default CarausellItem
+export default CarausellItem;

@@ -12,19 +12,26 @@ export const Navbar = () => {
       </Link>
       <ul className="nav nav-pills">
         <li className="nav-item dropdown">
-          <a
+          <Link
+            to="/"
             className="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
             href="#"
             role="button"
             aria-expanded="false"
           >
-            Dropdown
-          </a>
+            Favorite
+          </Link>
           <ul className="dropdown-menu">
-            {/* <Link to="/demo">
-        <li><a className="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-	  </Link> */}
+            <li>
+              <Link
+                to="/demo"
+                className="dropdown-item"
+                href="#scrollspyHeading3"
+              >
+                Third
+              </Link>
+            </li>
           </ul>
         </li>
       </ul>

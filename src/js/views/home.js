@@ -9,11 +9,11 @@ export const Home = () => {
     <>
 	<div>
     <TitleH1 title={"Character"}/>
-	  <CarauselItem/>
+	  <CarauselItem nature="people"/>
     </div>
 	<div>
     <TitleH1 title={"Planets"}/>
-	  <CarauselItem/>
+	  <CarauselItem nature="planet"/>
     </div>
     </>
   );
