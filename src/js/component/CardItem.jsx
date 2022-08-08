@@ -5,7 +5,12 @@ const CardItem = (props) => {
     <>
       <div className="card-sw">
         <div className="imagen">imagen</div>
-        <div className="cont">{props.item.name}</div>
+        <div className="cont">
+          <h2>{props.item.name}</h2>
+          <div><span>Gender: {props.item.gender}</span></div>
+          <div><span>Hair: {props.item.hair_color}</span></div>
+          <div><span>Eye: {props.item.eye_color}</span></div>
+          </div>
         <div className="piepag">
           <button type="button">Learn more</button>
           <div className="icon">
