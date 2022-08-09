@@ -38,28 +38,9 @@ export const Navbar = () => {
                 )
               })
             }
-            {/* <li>
-              <Link
-                to="/demo"
-                className="dropdown-item"
-                href="#scrollspyHeading3"
-              >
-                Third
-              </Link>
-            </li> */}
           </ul>
         </li>
       </ul>
     </nav>
-    // <nav classNameName="navbar navbar-light bg-light mb-3">
-    // 	<Link to="/">
-    // 		<span classNameName="navbar-brand mb-0 h1">React Boilerplate</span>
-    // 	</Link>
-    // 	<div classNameName="ml-auto">
-    // 		<Link to="/demo">
-    // 			<button classNameName="btn btn-primary">Check the Context in action</button>
-    // 		</Link>
-    // 	</div>
-    // </nav>
   );
 };

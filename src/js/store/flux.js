@@ -38,8 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       },
       // favorites 
-     setFavorites: async (id) => {
-      console.log(id)
+     setFavorites:  (id) => {
         let store = getStore();
         let existe = store.favorites.find((item) => item.created == id)
         if(!existe){
