@@ -20,8 +20,8 @@ const CarausellItem = (props) => {
       ) : props.nature == "planet" ? (
         <div className="container">
           <div className="card-padre">
-            {store.planets.map((item) => {
-              return <CardPlanet key={item.created} item={item}/>;
+            {store.planets.map((item,index) => {
+              return <CardPlanet key={item.created} item={item} index={index}/>;
             })}
           </div>
         </div>

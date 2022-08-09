@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext.js";
+
+
 const CardItem = (props) => {
+  const {store,actions} = useContext(Context)
+  console.log(props.item)
   return (
     <>
       <div className="card-sw">
@@ -17,7 +22,7 @@ const CardItem = (props) => {
         <Link to={`/personaje/${props.index}`} className="btn btn-outline-primary">Learn More!
         </Link>
           <div className="icon">
-          <button type="button" className="btn btn-outline-warning">
+          <button type="button" className="btn btn-outline-warning" onClick={() => actions.setFavorites(props.item.created)} >
             <i className="far fa-heart"></i>
           </button>
           </div>
