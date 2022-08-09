@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types"
+import { Link } from "react-router-dom";
 const CardItem = (props) => {
   return (
     <>
@@ -12,9 +13,13 @@ const CardItem = (props) => {
           <div><span>Eye: {props.item.eye_color}</span></div>
           </div>
         <div className="piepag">
-          <button type="button">Learn more</button>
+
+        <Link to={`/personaje/${props.index}`} className="btn btn-outline-primary">Learn More!
+        </Link>
           <div className="icon">
+          <button type="button" className="btn btn-outline-warning">
             <i className="far fa-heart"></i>
+          </button>
           </div>
         </div>
       </div>
@@ -22,6 +27,7 @@ const CardItem = (props) => {
   );
 };
 CardItem.propTypes={
-    item: PropTypes.object
+    item: PropTypes.object,
+    index: PropTypes.number,
 }
 export default CardItem 

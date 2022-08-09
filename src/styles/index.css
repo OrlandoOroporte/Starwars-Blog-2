@@ -36,7 +36,8 @@ img {
     width: 300px;
     border: 1px solid black;
     display: flex;
-    justify-content: space-between;
+    overflow-x: scroll;
+    justify-content:space-around ;
 }
 
 .icon {

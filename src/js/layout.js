@@ -9,6 +9,8 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Personaje} from "./views/Personaje.jsx";
+import { Planets} from "./views/Planets.jsx";
 
 //create your first component
 const Layout = () => {
@@ -23,11 +25,12 @@ const Layout = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-
             <Route path="/demo" element={<Demo />} />
             <Route path="/single/:theid" element={<Single />} />
+            <Route path="/personaje/:index" element={<Personaje/>}/>
+            <Route path="/planeta/:index" element={<Planets/>}/>
             <Route path="*" element={<h1>Not found 404</h1>} />
-          </Routes>
+            </Routes>
           <Footer />
         </ScrollToTop>
       </BrowserRouter>

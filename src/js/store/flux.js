@@ -20,13 +20,14 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       //aqui va la conuslta de los planetas a la api
       getPlanets: async () => {
+        let store = getStore();
         try {
-          let response2 = await fetch("https://swapi.dev/api/planets");
-          let data2 = await response2.json();
-          if (response2.ok){
+          let response = await fetch("https://swapi.dev/api/planets");
+          let data = await response.json();
+          if (response.ok){
             setStore({
               ...store,
-              planets: data2.results,
+              planets: data.results,
             })
           }
         } catch (error) {
