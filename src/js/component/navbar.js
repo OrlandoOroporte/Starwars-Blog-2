@@ -4,7 +4,7 @@ import Star_Wars_Logo_xtrafondos from "/workspace/Starwars-Blog-2/src/img/Star_W
 import { Context } from "../store/appContext.js";
 
 export const Navbar = () => {
-  const {store, action} = useContext(Context) 
+  const {store, actions} = useContext(Context) 
   return (
     <nav id="navbar-example2" className="navbar bg-light px-3 mb-3">
       <Link to="/">
@@ -32,8 +32,8 @@ export const Navbar = () => {
               </li>:
               store.favorites.map((item) => {
                 return (
-                <li key={item.create}>
-                  <a className="dropdown-item" href="#" key={item.create} onClick={()=> action.deleteFavorite(item.created)}>{item.name}</a>
+                <li key={item.created}>
+                  <a className="dropdown-item" href="#" onClick={()=> actions.deleteFavorite(item.created)}>{item.name}</a>
                 </li>
                 )
               })
