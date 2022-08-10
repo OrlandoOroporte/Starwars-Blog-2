@@ -8,7 +8,6 @@ export const Planets = () => {
   const character = store.planets.find((item, index) => {
     return index == params.index;
   });
-  console.log(params)
   return (
     <>
       <div className="card mb-3">

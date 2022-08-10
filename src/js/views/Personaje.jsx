@@ -8,7 +8,6 @@ export const Personaje = () => {
   const character = store.people.find((item, index) => {
     return index == params.index;
   });
-  console.log(character, params, store);
   return (
     <>
       <div className="card mb-3">

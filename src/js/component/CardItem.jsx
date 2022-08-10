@@ -6,7 +6,6 @@ import { Context } from "../store/appContext.js";
 
 const CardItem = (props) => {
   const {store,actions} = useContext(Context)
-  console.log(props.item)
   return (
     <>
       <div className="card-sw">

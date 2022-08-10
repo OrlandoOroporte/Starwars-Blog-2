@@ -3,8 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       people: [],
       planets: [],
-      favorites: [], 
-      endPoint: ["people","planets"],
+      favorites: [],
+      endPoint: ["people", "planets"],
     },
     actions: {
       getPeople: async () => {
@@ -26,39 +26,42 @@ const getState = ({ getStore, getActions, setStore }) => {
         try {
           let response = await fetch("https://swapi.dev/api/planets");
           let data = await response.json();
-          if (response.ok){
+          if (response.ok) {
             setStore({
               ...store,
               planets: data.results,
-            })
+            });
           }
-        } catch (error) {
-          
-        }
-
+        } catch (error) {}
       },
-      // favorites 
-     setFavorites:  (id) => {
+      // favorites
+      setFavorites: (id) => {
         let store = getStore();
-        let existe = store.favorites.find((item) => item.created == id)
-        if(!existe){
+        let existe = store.favorites.find((item) => item.created == id);
+        if (!existe) {
           for (const endPoint of store.endPoint) {
             for (const item of store[endPoint]) {
-              if(item.created == id){
+              if (item.created == id) {
                 setStore({
                   ...store,
-                  favorites: [...store.favorites,item]
-                })
+                  favorites: [...store.favorites, item],
+                });
                 break;
               }
             }
           }
         } else {
-          let newArray = store.favorites.filter((item) => item.created != id)
-          setStore({...store,
-          favorites: newArray})
+          let newArray = store.favorites.filter((item) => item.created != id);
+          setStore({ ...store, favorites: newArray });
         }
-     }
+      },
+      //// delete
+      deleteFavorite: (id) => {
+        let store = getStore();
+        console.log(id)
+        let newList = store.favorites.filter((item) => item.created != id);
+        setStore({...store, favorites: newList});
+      },
     },
   };
 };

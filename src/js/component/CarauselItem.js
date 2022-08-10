@@ -6,7 +6,6 @@ import CardPlanet from "./CardPlanet.jsx";
 const CarausellItem = (props) => {
   //destructuracion
   const { store } = useContext(Context);
-  console.log(store)
   return (
     <>
       {props.nature == "people" ? (
