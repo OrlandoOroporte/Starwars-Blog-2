@@ -16,7 +16,7 @@ const CardPlanet = (props) => {
           <div><span>Diameter: {props.item.diameter}</span></div>
           </div>
         <div className="piepag">
-        <Link to={`/planeta/${props.index}`} className="btn btn-outline-primary">Learn More!
+        <Link to={`/planeta/${props.index}`} className="btn btn-outline-primary me">Learn More!
         </Link>
           <div className="icon">
           <button type="button" className="btn btn-outline-warning" onClick={() => actions.setFavorites(props.item.created)} >
