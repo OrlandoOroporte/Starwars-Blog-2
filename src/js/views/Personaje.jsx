@@ -15,9 +15,11 @@ export const Personaje = () => {
         <div className="card-body">
           <h1 className="card-title">{character?.name}</h1>
           <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
+            <div>{character?.hair_color}</div>
+            <div>{character?.skin_color}</div>
+            <div>{character?.eye_color}</div>
+            <div>{character?.birth_year}</div>
+            </p>
           <p className="card-text">
             <small className="text-muted">Last updated 3 mins ago</small>
           </p>
