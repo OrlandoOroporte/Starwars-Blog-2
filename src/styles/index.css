@@ -1,40 +1,39 @@
 /* 
     General Styles
 */
+body {
+    background-image: url(https://st.depositphotos.com/1575673/4281/v/600/depositphotos_42819705-stock-video-starfield.jpg);
+    color:white
+}
 img {
     width: 75px;
     height: 55px;
 }
 
 .card-padre {
-    border: 1px solid black;
     display: flex;
     overflow-x: scroll;
     gap: 5px;
 }
 .card-sw {
-    border: 1px solid black;
     min-width: 300px;
     height: 400px;
 }
 
 .imagen {
   height: 180px;
-  width: 300px;
-  border: 1px solid black;
+  width: 300px
 
 }
 
 .cont {
     height: 150px;
     width: 300px; 
-    border: 1px solid black;
 }
 
 .piepag {
     height: 70px;
     width: 300px;
-    border: 1px solid black;
     display: flex;
     overflow-x: scroll;
     justify-content:space-around ;
