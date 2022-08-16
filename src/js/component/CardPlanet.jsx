@@ -8,7 +8,13 @@ const CardPlanet = (props) => {
   return (
     <>
       <div className="card-sw">
-        <div className="imagen">imagen</div>
+        <div className="imagen">
+          {props.index == 0 ?
+            <img src={`https://starwars-visualguide.com/assets/img/planets/${Math.floor(Math.random()*10+1)}.jpg`} className="card-img-top" alt="..."/>:
+            <img src={`https://starwars-visualguide.com/assets/img/planets/${props.index+1}.jpg`} className="img2" alt="..."/>
+          }
+          {/* <img src={`https://starwars-visualguide.com/assets/img/planets/${props.index+1}.jpg`} className="card-img-top" alt="..."/> */}
+        </div>
         <div className="cont">
           <h2>{props.item.name}</h2>
           <div><span>Population: {props.item.population}</span></div>

@@ -6,10 +6,11 @@ import { Context } from "../store/appContext.js";
 
 const CardItem = (props) => {
   const {store,actions} = useContext(Context)
+  
   return (
     <>
       <div className="card-sw">
-        <div className="imagen">imagen</div>
+        <div className="imagen"><img className="img2" src={`https://starwars-visualguide.com/assets/img/characters/${props.index+1}.jpg`} alt="..."/></div>
         <div className="cont">
           <h2>{props.item.name}</h2>
           <div><span>Gender: {props.item.gender}</span></div>

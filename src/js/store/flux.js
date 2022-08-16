@@ -5,6 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       planets: [],
       favorites: [],
       endPoint: ["people", "planets"],
+      imagePeople: [],
+      imagePlanet:[],
     },
     actions: {
       getPeople: async () => {
@@ -34,6 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         } catch (error) {}
       },
+     
       // favorites
       setFavorites: (id) => {
         let store = getStore();

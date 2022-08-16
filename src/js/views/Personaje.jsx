@@ -11,14 +11,14 @@ export const Personaje = () => {
   return (
     <>
       <div className="card mb-3">
-        <img src="..." className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h1 className="card-title">{character?.name}</h1>
-          <p className="card-text">
-            <div>{character?.hair_color}</div>
-            <div>{character?.skin_color}</div>
-            <div>{character?.eye_color}</div>
-            <div>{character?.birth_year}</div>
+        <img src={`https://starwars-visualguide.com/assets/img/characters/${parseInt(params.index)+1}.jpg`} alt="..." />
+       <div className="card-body">
+          <h1 className="card-title text-secondary">{character?.name}</h1>
+          <p className="card-text text-secondary">
+            <span>{character?.hair_color}</span>
+            <span>{character?.skin_color}</span>
+            <span>{character?.eye_color}</span>
+            <span>{character?.birth_year}</span>
             </p>
           <p className="card-text">
             <small className="text-muted">Last updated 3 mins ago</small>
