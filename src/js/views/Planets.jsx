@@ -10,14 +10,15 @@ export const Planets = () => {
   });
   return (
     <>
-      <div className="card mb-3">
-        <img src="..." className="card-img-top" alt="..." />
+      <div className="card mb-3 bg">
+        <img className="img2" src={`https://starwars-visualguide.com/assets/img/planets/${parseInt(params.index)+1}.jpg`}alt="..." />
         <div className="card-body">
           <h1 className="card-title">{character?.name}</h1>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
+          <div className="card-text text-secondary">
+            <div><span>{character?.population}</span></div>
+            <div><span>{character?.terrain}</span></div>
+            <div><span>{character?.diameter}</span></div>
+          </div>
           <p className="card-text">
             <small className="text-muted">Last updated 3 mins ago</small>
           </p>
